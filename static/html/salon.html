@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Salon | Society of Letters</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <link href="/css/polymer.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/lib/polymer/components/platform/platform.js"></script>
+    <link rel="import" href="/js/lib/polymer/components/font-roboto/roboto.html">
+  </head>
+  <body fullbleed unresolved touch-action="auto">
+    <core-scaffold>
+      <core-header-panel navigation flex mode="seamed">        
+        <core-toolbar>Menu</core-toolbar>
+        <core-menu theme="core-light-theme" selected="2">
+          <core-item icon="forward" label="Salons"><a href="/salons"></a></core-item>
+          <core-item icon="communication:email" id="draftsMenu" label="Drafts"><a href="/drafts"></a></core-item>
+          <core-item icon="communication:email" id="threadsMenu" label="Threads"></core-item>          
+          <core-item icon="communication:email" id="newThreadMenu" label="New Thread"><a href=""></a></core-item>
+        </core-menu>
+      </core-header-panel>
+  
+      <div tool><span id="salonName" data-bind="text: salon">Name</span> Salon</div>
+      <div id="content">
+        <div data-bind="ifnot: empty">
+          <ul class="threads" data-bind="foreach: threads">
+            <li class="thread"><a data-bind="text: subject, attr {id: msgid}">Thread Subject</a></li>
+          </ul>
+        </div>
+        <div data-bind="if: empty">
+          No threads yet. Be the first to <a id="start">start a new thread</a>.
+        </div>
+      </div>
+    </core-scaffold>
+  
+    <div>
+      Content
+    </div>
+  </body>
+  
+  <link rel="import" href="/js/lib/polymer/components/core-scaffold/core-scaffold.html">
+  <link rel="import" href="/js/lib/polymer/components/core-header-panel/core-header-panel.html">
+  <link rel="import" href="/js/lib/polymer/components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="/js/lib/polymer/components/core-menu/core-menu.html">
+  <link rel="import" href="/js/lib/polymer/components/core-item/core-item.html">
+  <link rel="import" href="/js/lib/polymer/components/core-selector/core-selector.html">
+  <link rel="import" href="/js/lib/polymer/components/core-selection/core-selection.html">
+  <link rel="import" href="/js/lib/polymer/components/core-icons/core-icons.html">
+  <link rel="import" href="/js/lib/polymer/components/core-overlay/core-overlay.html">
+  <link rel="import" href="/js/lib/polymer/components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="/js/lib/polymer/components/paper-input/paper-input.html">  
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/js/lib/knockout.js"></script>
+  <script type="text/javascript" src="/js/lib/jquery.query-object.js"></script>  
+  <script type="text/javascript" src="/js/lib/debug.js"></script>
+  <script type="text/javascript" src="/js/lib/jsonrpc.js"></script>
+  <script type="text/javascript">
+    userid="$userid";
+  </script>
+  <script type="text/javascript" src="/js/login.js"></script>
+  <script type="text/javascript" src="/js/salon.js"></script>
+</html>

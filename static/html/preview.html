@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Preview Message | Society of Letters</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <link href="/css/polymer.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/lib/polymer/components/platform/platform.js"></script>
+    <link rel="import" href="/js/lib/polymer/components/font-roboto/roboto.html">
+  </head>
+  <body fullbleed unresolved touch-action="auto">
+    <core-scaffold>
+      <core-header-panel navigation flex mode="seamed">        
+        <core-toolbar>Menu</core-toolbar>
+        <core-menu theme="core-light-theme" selected="3">
+          <core-item icon="forward" label="Salons"><a href="/"></a></core-item>
+          <core-item icon="settings" label="Admin"><a href="/admin"></a></core-item>
+          <core-item icon="test" label="Threads" id="threadsMenu"><a href=""></a></core-item>
+          <core-item icon="communication:email" label="Preview"></core-item>
+        </core-menu>
+      </core-header-panel>
+  
+      <div tool>Preview : Salon</div>
+      <div id="content">
+        <paper-input id="subjectField" label="Subject"></paper-input>
+        <br/>
+        <paper-input id="bodyField" label="Body" multiline></paper-input>
+        <br/>
+        <paper-button id="editButton" label="Edit" raisedButton></paper-button>
+        <paper-button id="postButton" label="Post" raisedButton></paper-button>
+        <paper-button id="draftButton" label="Save as Draft" raisedButton></paper-button>
+        <paper-toast id="savedToast" text="Draft saved"></paper-toast>
+      </div>
+    </core-scaffold>
+  </body>
+  
+  <link rel="import" href="/js/lib/polymer/components/core-scaffold/core-scaffold.html">
+  <link rel="import" href="/js/lib/polymer/components/core-header-panel/core-header-panel.html">
+  <link rel="import" href="/js/lib/polymer/components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="/js/lib/polymer/components/core-menu/core-menu.html">
+  <link rel="import" href="/js/lib/polymer/components/core-item/core-item.html">
+  <link rel="import" href="/js/lib/polymer/components/core-selector/core-selector.html">
+  <link rel="import" href="/js/lib/polymer/components/core-selection/core-selection.html">
+  <link rel="import" href="/js/lib/polymer/components/core-icons/core-icons.html">
+  <link rel="import" href="/js/lib/polymer/components/core-overlay/core-overlay.html">
+  <link rel="import" href="/js/lib/polymer/components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="/js/lib/polymer/components/paper-input/paper-input.html">  
+  <link rel="import" href="/js/lib/polymer/components/paper-button/paper-button.html">  
+  <link rel="import" href="/js/lib/polymer/components/paper-toast/paper-toast.html">  
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/js/lib/knockout.js"></script>
+  <script type="text/javascript" src="/js/lib/jquery.query-object.js"></script>  
+  <script type="text/javascript" src="/js/lib/debug.js"></script>
+  <script type="text/javascript" src="/js/lib/jsonrpc.js"></script>
+  <script type="text/javascript">
+    userid="$userid";
+  </script>
+  <script type="text/javascript" src="/js/preview.js"></script>
+</html>
